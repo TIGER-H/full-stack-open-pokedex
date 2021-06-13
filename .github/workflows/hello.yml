@@ -35,6 +35,6 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Run ls -l
-        run: echo ls -l
+        run: ls -l
       - name: Show date
-        run: echo date
+        run: date
