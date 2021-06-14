@@ -59,4 +59,6 @@ jobs:
           heroku_app_name: pokedex4fs
           # An optional buildpack to use when creating the heroku application
           healthcheck: "https://pokedex4fs.herokuapp.com/health"
+          checkstring: "ok"
+          rollbackonhealthcheckfailed: true
          
