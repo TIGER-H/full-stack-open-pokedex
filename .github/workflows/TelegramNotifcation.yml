@@ -39,6 +39,6 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO_ME }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          args: The ${{ github.event_name }} event triggered first step.
+#           args: The ${{ github.event_name }} event triggered first step.
           message: guuuud
 
