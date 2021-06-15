@@ -24,7 +24,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - name: Telegram Message Notify
+      - name: Telegram Message Notify @group
         # You may pin to the exact commit or the version.
         # uses: appleboy/telegram-action@2efd23283ae25229a0b4d315d5d33f73b346ef99
         uses: appleboy/telegram-action@master
@@ -32,3 +32,13 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           args: The ${{ github.event_name }} event triggered first step.
+      - name: Telegram Message Notify @me
+        # You may pin to the exact commit or the version.
+        # uses: appleboy/telegram-action@2efd23283ae25229a0b4d315d5d33f73b346ef99
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO_ME }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          args: The ${{ github.event_name }} event triggered first step.
+          message: guuuud
+
